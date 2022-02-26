@@ -1,0 +1,504 @@
+body {
+  background-color: #FFFFFF;
+  color: #02145E;
+  font-family: Ariel, Helvetica, sans-serif;
+}
+
+
+/*Header Stuff*/
+header {
+  background-color: #02145E;
+  color: #FFFFFF;
+  text-align: center;
+  height: auto;
+}
+
+header a:link{
+  text-decoration: none;
+}
+
+header a:visited{
+  color: #FFFFFF;
+}
+
+header a:hover{
+  color: #8E8F95;
+}
+
+h1 {
+  position: relative;
+  width: 100%;
+  top: 40%;
+  text-align: center;
+  margin-block-start: 0px;
+  margin-block-end: 0px;
+}
+
+h1 a{
+  vertical-align: center;
+}
+
+h2 {
+  padding-left: .5em;
+}
+
+h3 {
+  padding-left: .5em;
+}
+/*--------------*/
+
+iframe{
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  width: min(80%, 600px);
+  height: auto;
+}
+
+main {
+  background-color: #FFFFFF;
+  color: #33417C;
+  padding-top: .5em;
+  padding-bottom: .5em;
+}
+
+main div {
+  padding-top: 1em;
+  padding-bottom: 1em;
+  align-items: center;
+}
+
+p {
+  padding-left: 1em;
+  padding-right: 1em;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+}
+
+
+span {
+  padding-left: 1em;
+  padding-right: 1em;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+}
+
+ul {
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+}
+
+ol {
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+}
+
+/*NAV STUFF*/
+nav a {
+  text-decoration: none;
+  height: 100%;
+  font-weight: bold;
+}
+
+nav {
+  text-align: center;
+  display: block;
+
+}
+
+nav ul{
+  list-style-type: none;
+  font-size: 1.0em;
+  padding-inline-start: 0em;
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+}
+
+nav li{
+  border-bottom-width: thin;
+  border-bottom-color: #5F678A;
+  border-bottom-style: solid;
+}
+
+nav a:link{
+	color: #10236E;
+}
+
+nav a:visited{
+	color: #10236E;
+}
+
+nav a:hover{
+	color:#FFFFFF;
+}
+/*---------------------------*/
+
+table {
+  border-style: solid;
+  border-width: 1px;
+  border-collapse: collapse;
+}
+
+th {
+  border-style: solid;
+  border-width: 1px;
+}
+
+td {
+  border-style: solid;
+  border-width: 1px;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+
+/*Some images are very large, set max-width so they don't
+  take over the page when zooming out*/
+img {
+  width: 100%;
+  height: auto;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+footer{
+  text-align: center;
+  padding-top: .5em;
+  display: flex-wrap;
+}
+
+
+/*IDS AND CLASSES*/
+
+ /*this only actually affects
+  the nav & footer color on the tablet/phone layouts*/
+#liquid {
+  background-color: #DBD7CF;
+}
+
+/*a background image didn't work, so to
+  format only the homepage image I used
+  the image element for the final_hero class*/
+#final_hero{
+  background-color: #FFFFFF;
+}
+
+#final_hero img {
+  max-width: 100%;
+}
+
+/*center up the pictures*/
+#img1{
+  text-align: center;
+}
+
+#img2{
+  text-align: center;
+}
+
+#img3{
+  text-align: center;
+}
+
+#img4{
+  text-align: center;
+}
+
+/*this CTA style will be uniform across pages*/
+.contribute {
+  background-color: #B6913B;
+  color: #FFFFFF;
+  padding-top: .25em;
+  padding-bottom: .25em;
+}
+
+.contribute a {
+  color: #FFFFFF;
+  font-weight: bold;
+}
+
+.contribute p {
+  vertical-align: middle;
+  margin-block-start: .25em;
+  margin-block-end: .25em;
+}
+
+/*image class for 4 flexed images in "img3" div on inspection page*/
+.four-img {
+  max-width: min(45%, 500px); /*allow for <500px, otherwise they stack in box at full size*/
+  height: auto;
+  padding-bottom: 1em;
+  padding-top: 1em;
+}
+
+/*----------------------------*/
+
+
+/*Because the parts column is so wide, and Manufacturer and Notes are
+  nice to have but not necessary, we'll hide them progressively as the
+  screen width shrinks*/
+@media (max-width: 400px) {
+  #parts td:nth-of-type(4){
+    display: none;
+  }
+  #parts th:nth-of-type(4){
+    display:none;
+  }
+}
+@media (max-width: 600px) {
+  #parts td:nth-of-type(5){
+    display: none;
+  }
+
+  #parts th:nth-of-type(5){
+    display:none;
+  }
+}
+
+/*Tablet view*/
+@media (min-width: 600px) {
+
+  /*need margin-block-start and end here to have some space*/
+  nav ul{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+  }
+  /*eliminate the bottom border*/
+  nav li{
+    vertical-align: middle;
+    border-bottom-style: none;
+  }
+
+
+}
+
+
+@media (min-width: 1000px){
+  #liquid{
+    width: 80%;
+    margin: auto;
+    display: grid;
+    height: auto;
+    grid-template-columns: 50% auto;
+    grid-template-rows: 8em auto auto 5%;
+    background-color: #FFFFFF;
+  }
+
+  header{
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+
+  }
+
+  h1{
+    height: 20%;
+  }
+
+  /*Can only apply grids to immediate child. Since divs are inside main,
+    main must have it's own grid*/
+  main{
+    display: grid;
+    width: auto;
+    grid-template-rows: auto auto auto auto;
+    grid-template-columns: 50% auto;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    font-size: 1.25em;
+  }
+
+
+
+  #home {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    grid-template-columns: auto;
+  }
+
+  #final_hero{
+    grid-column-start:2;
+    grid-column-end: 3;
+    grid-row-start: 3;
+    grid-row-end: 4;
+  }
+
+
+  #para1 {
+    padding-top: 0em;
+    padding-bottom: 0em;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    margin-top:auto;
+    margin-bottom:auto;
+  }
+
+
+  #img1 {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    margin-top:auto;
+    margin-bottom:auto;
+
+  }
+
+  #para2 {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    line-height: 1.25em;
+    margin-top:auto;
+    margin-bottom:auto;
+  }
+
+  #img2 {
+    padding-top: 0em;
+    padding-bottom: 0em;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    margin-top:auto;
+    margin-bottom:auto;
+  }
+
+  #para3 {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    margin-top:auto;
+    margin-bottom:auto;
+  }
+
+  #img3 {
+    padding-top: 0em;
+    padding-bottom: 0em;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    margin-top:auto;
+    margin-bottom:auto;
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+
+    justify-content: space-around;
+  }
+
+  #para4 {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 4;
+    grid-row-end: 5;
+    margin-top:auto;
+    margin-bottom:auto;
+  }
+
+  #img4 {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 4;
+    grid-row-end: 5;
+    margin-top:auto;
+    margin-bottom:auto;
+  }
+
+
+
+
+
+
+
+
+  nav{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    background-color: #FFFFFF;
+  }
+  nav ul{
+      vertical-align: middle;
+      margin-block-start: 0px;
+      margin-block-end: 0px;
+      margin-left: auto;
+      margin-right: auto;
+      width: 100%
+  }
+
+  nav a:hover {
+    background-color: #10236E;
+    color: #FFFFFF;
+    vertical-align: middle;
+  }
+  /*set the nav anchors to fill the ul, this way
+    the a:hover activates anywhere in the anchor's box*/
+  nav a {
+    display: block;
+    padding-top: 1.75em;
+    padding-bottom: 1em;
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+
+  nav li{
+    width: 25%;
+  }
+
+  .contribute {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 3;
+  }
+
+  footer {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 4;
+    grid-row-end: 5;
+  }
+
+
+
+}
+
+/*I used this site to help me pick out disability-friendly colors*/
+/* COLORS 2 w/ oppositeCSS - Cascading Style Sheet */
+/* Palette URL: http://paletton.com/#uid=23R0J0klzmR1Krrbkpov1kgVshq
+
+ #33417C 	Main text
+ #8E8F95  Header Hover
+ #5F678A
+ #10236E  link, Full size nav hover background
+ #02145E  Body text/Header Background/link hover
+
+ #B6913B 	/* CTA Background
+ #DBD7CF  CTA Color
+ #CAB583
+ #A17305
+ #8B6100
+
+
+*/

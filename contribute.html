@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" type="text/css" href="final.css">
+  <link rel="stylesheet" type="text/css" href="print.css" media="print">
+  <title>DIY Renesis Engine Rebuild Resource</title>
+  <meta charset="utf-8">
+
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+  <style>
+    @media (min-width: 1000px){
+      nav{
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 2;
+        grid-row-end: 3;
+        background-color: #FFFFFF;
+      }
+
+      main{
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 3;
+        grid-row-end: 4;
+        display: block;
+        text-align: center;
+      }
+
+      #checkdiv{
+        width: 30%;
+        text-align:left;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 93.5px;
+        padding-top: 0px;
+        padding-top: 0px;
+      }
+
+
+
+      label.checklabel input[type=checkbox]{
+        position: relative;
+        vertical-align:middle;
+      }
+
+    }
+
+  form{
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  p {
+    padding-top: 0px;
+    padding-bottom: 0px;
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  h1 {
+    text-align: center;
+  }
+
+  td {
+    text-align: left;
+  }
+
+  td nth-of-type(1){
+    width: 20px;
+  }
+
+  th {
+    colspan
+    text-align: center;
+  }
+
+  table{
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  </style>
+
+</head>
+
+<body>
+  <div id="liquid">
+    <header>
+      <h1><a href="final.html">DIY Renesis Engine Rebuild Resource</a></h1>
+    </header>
+
+    <nav>
+        <ul>
+          <li><a href="teardown.html">Teardown</a></li>
+          <li><a href="inspection.html">Inspection</a></li>
+          <li><a href="reassembly.html">Reassembly</a></li>
+          <li><a href="links.html">Parts & Links</a></li>
+        </ul>
+    </nav>
+
+
+
+    <main>
+
+      <div>
+        <h2>Thank you for joining us!</h2>
+        <!--link to pacific.php per Conner's video -->
+        <form action="pacific.php">
+          <input type="text" id="name" name="name">
+          <label for="name">Name</label><br>
+
+          <input type="email" id="email" name="email">
+          <label for="email" style="padding-right:4px;">Email</label><br>
+
+          <input type="tel" id="phone" name="phone" pattern="[0-9]{3}[0-9]{3}[0-9]{4}">
+          <label for="phone">Phone</label><br>
+          <br>
+
+          <!--Create a div for the checkboxes to try and
+              keep the input elements aligned -->
+          <div id="checkdiv">
+            I'd Like to Help By
+            <br>
+
+            <input type="checkbox" id="contr1" name="contr1" value="Content">
+            <label for="contr1" class="checklabel">Contributing Content</label>
+            <br>
+
+            <input type="checkbox" id="contr2" name="contr2" value="Services">
+            <label for="contr2" class="checklabel">Listing Rebuilding or Parts Services</label>
+            <br>
+
+            <input type="checkbox" id="contr3" name="contr3" value="Donate">
+            <label for="contr3" class="checklabel">Donating</label>
+            <br>
+          </div>
+
+          <label for="comment">Comment</label><br>
+          <textarea id="comment" name="comment" rows="4" cols="30"></textarea>
+          <br>
+          <input type="submit">
+        </form>
+      </div>
+    </main>
+
+    <footer>
+      Contact me at
+      <a href="mailto:cariedel5@mail.fhsu.edu">cariedel5@mail.fhsu.edu</a>
+    </footer>
+  </div>
+</body>
+
+
+</html>
